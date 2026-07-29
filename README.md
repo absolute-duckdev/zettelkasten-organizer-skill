@@ -1,6 +1,6 @@
 # Zettelkasten Organizer
 
-An [Agent Skills](https://agentskills.io) skill that turns an AI agent into a Zettelkasten assistant: it sets up, organizes, and maintains a slip-box note system in **any** note-taking tool — Obsidian, Logseq, Notion, Craft, plain markdown files, or even paper.
+An [Agent Skills](https://agentskills.io) skill that turns an AI agent into a Zettelkasten assistant: it sets up, organizes, and maintains a slip-box note system in **any** note-taking tool — Obsidian, Logseq, Notion, Craft, or plain markdown files.
 
 The method is the one developed by sociologist **Niklas Luhmann** (roughly 90,000 cards, 70+ books) and popularized by **Sönke Ahrens** in *How to Take Smart Notes*. Its core insight: the value of a note system is not in collecting notes but in the network of connections between them. **Folders organize; links think.**
 
@@ -64,7 +64,7 @@ zettelkasten-organizer-skill/
 │   └── references/
 │       ├── zettelkasten-framework.md  ← theory: note types, atomicity, linking rules
 │       ├── note-templates.md          ← templates for every note type
-│       └── tool-adaptations.md        ← syntax per tool: Obsidian, Logseq, Notion, Craft, plain markdown, paper
+│       └── tool-adaptations.md        ← syntax per tool: Obsidian, Logseq, Notion, Craft, plain markdown
 └── examples/
     └── mini-zettelkasten/             ← a tiny working Zettelkasten produced by the skill
 ```

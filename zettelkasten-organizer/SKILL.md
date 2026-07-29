@@ -1,6 +1,6 @@
 ---
 name: zettelkasten-organizer
-description: "Implement and maintain a Zettelkasten (slip-box) note-taking system in any tool. Use this skill whenever the user wants to: set up a Zettelkasten from scratch, organize existing notes with the Zettelkasten method, process an inbox of fleeting notes into permanent notes, create atomic notes, link notes into a knowledge network, find and connect orphaned notes, audit the health of a note system, create structure notes or maps of content (MOCs), split notes covering multiple ideas, or migrate notes into a slip-box workflow. Also trigger when the user mentions 'Zettelkasten', 'slip-box', 'smart notes', 'atomic notes', 'permanent notes', 'literature notes', 'fleeting notes', 'structure notes', 'MOCs', 'Luhmann', 'Ahrens', or 'How to Take Smart Notes', or asks how to organize notes with links instead of folders. The method is tool-agnostic: it works with Obsidian, Logseq, Notion, Craft, plain markdown files, or even paper."
+description: "Implement and maintain a Zettelkasten (slip-box) note-taking system in any tool. Use this skill whenever the user wants to: set up a Zettelkasten from scratch, organize existing notes with the Zettelkasten method, process an inbox of fleeting notes into permanent notes, create atomic notes, link notes into a knowledge network, find and connect orphaned notes, audit the health of a note system, create structure notes or maps of content (MOCs), split notes covering multiple ideas, or migrate notes into a slip-box workflow. Also trigger when the user mentions 'Zettelkasten', 'slip-box', 'smart notes', 'atomic notes', 'permanent notes', 'literature notes', 'fleeting notes', 'structure notes', 'MOCs', 'Luhmann', 'Ahrens', or 'How to Take Smart Notes', or asks how to organize notes with links instead of folders. The method is tool-agnostic: it works with Obsidian, Logseq, Notion, Craft, or plain markdown files."
 license: MIT
 metadata:
   author: absolute-duckdev
@@ -51,7 +51,7 @@ Every Zettelkasten implementation needs exactly four things. The method never ch
 
 Before anything else:
 
-1. **Ask or infer where the notes live.** An Obsidian vault? A Logseq graph? Notion? Craft? A folder of markdown files? A pile of text files? Paper?
+1. **Ask or infer where the notes live.** An Obsidian vault? A Logseq graph? Notion? Craft? A folder of markdown files? A pile of text files?
 2. **Determine access.** Can you read and write the notes directly (filesystem access, a working integration)? Or can you only deliver artifacts?
 3. **Map the primitives.** Read `references/tool-adaptations.md` and decide how containers, links, IDs, and tags will be expressed in the user's tool.
 4. **Confirm the mapping in one short message** before proceeding:

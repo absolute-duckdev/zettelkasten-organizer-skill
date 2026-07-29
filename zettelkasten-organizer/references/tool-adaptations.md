@@ -13,7 +13,6 @@ How to express the four Zettelkasten primitives — containers, links, IDs, tags
 | **Notion** | One database, `Type` property | Relations + backlinks | `ID` property (or title prefix) | Multi-select property |
 | **Craft** | Folders/documents | Document links + backlinks | Title prefix (`202607281709 Title`) | Tags feature |
 | **Plain markdown** | Folders | Relative links or `[[wikilinks]]` | Filename prefix + frontmatter `id:` | Frontmatter |
-| **Paper / notepad** | Drawers or sections | Written card numbers ("see X") | Luhmann numbering (`1`, `1a`, `1a1`) | Keyword line on card |
 
 ## Obsidian
 
@@ -54,14 +53,6 @@ How to express the four Zettelkasten primitives — containers, links, IDs, tags
 - **IDs:** filename prefix + `id:` in YAML frontmatter.
 - **Tags:** frontmatter `tags:` list.
 - This is the fallback format for delivery when no direct access exists — it is also a first-class long-term home.
-
-## Paper / notepad
-
-- **Containers:** physical sections or drawers per note type.
-- **Links:** Luhmann's original method — write the target card's number next to the reference ("see 21a3"). Branch numbers place a card *behind* the one it continues: card `21a` continues `21`; `21a1` continues `21a`. This gives physical proximity to the most-connected cards.
-- **IDs:** the branching number itself (`1`, `1a`, `1a1`, …) — no timestamps needed.
-- **Tags:** a keyword line at the card's bottom, indexed in a keyword register (a structure note for paper).
-- **Agent's role:** produce the card texts (title, body, link references with numbers left as placeholders for the user to assign), plus a starter keyword register. The user writes/numbers the cards.
 
 ## Anything else
 
