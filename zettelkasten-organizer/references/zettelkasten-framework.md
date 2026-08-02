@@ -15,7 +15,7 @@ A note's value is determined by its **connections**, not its content alone. An i
 2. **Emergence beats classification.** The system's job is not to file ideas into a pre-designed taxonomy but to let unexpected clusters surface. Surprise is the signal that the system is working.
 3. **Writing is thinking.** A permanent note is not a record of a thought already finished — the act of writing it, in full sentences, in your own words, *is* the thinking.
 
-## The four note types — precise definitions
+## The five note types — precise definitions
 
 ### Fleeting notes
 
@@ -25,9 +25,10 @@ A note's value is determined by its **connections**, not its content alone. An i
 - **Location:** the inbox.
 - **Test:** if a fleeting note is still unprocessed after a week, it's inbox debt.
 
-### Literature notes
+### Bib notes
 
-- **Purpose:** record what a *source* says, in your own words, so the idea can enter the network with its origin attached.
+- **Purpose:** record what a *source* says, in your own words, so ideas can enter the network with their origin attached. These are also called literature notes.
+- **Type value:** use `type: bib` in portable metadata.
 - **Cardinality:** one per source (or per chapter for dense books).
 - **Content:** only the ideas relevant to your thinking, paraphrased and ultra-brief; the full bibliographic reference; page or location references for specific ideas.
 - **Not:** a summary of the whole source. Selectivity is the skill — you record what matters to *your* questions, not the author's table of contents.
@@ -40,7 +41,7 @@ A note's value is determined by its **connections**, not its content alone. An i
 - **Autonomous:** fully understandable on its own — written for a reader with no context: your future self in five years.
 - **Title:** a **statement** — the claim the note makes (see below).
 - **Body:** full sentences, your own words. The idea, the context in which it holds, why it matters, what it implies.
-- **Source:** where the idea came from, if external (a link to the literature note, or a direct reference).
+- **Source:** where the idea came from, if external (a link to the bib note, or a direct reference).
 - **Links:** to related permanent notes, each with a stated reason.
 
 ### Structure notes (maps of content / MOCs)
@@ -49,6 +50,15 @@ A note's value is determined by its **connections**, not its content alone. An i
 - **Content:** annotated lists of links — each link accompanied by one line on what the note says or why it's listed. May include a short framing of the topic's key tensions or open questions.
 - **Emergent:** created when a cluster forms, revised as the topic grows. Never created preemptively for an empty topic.
 - **Not:** rigid tables of contents. Multiple structure notes can index overlapping sets; a permanent note can appear in several maps. The map is a view, not a container.
+
+Structure notes include MOCs, small keyword registers, and argument structures. A MOC is a reusable map of an emerging cluster; a register offers a few curated entry points; an argument structure arranges notes for one project or output.
+
+### Project notes
+
+- **Purpose:** support a specific deliverable with drafts, tasks, decisions, research questions, and working outlines.
+- **Location:** a project container, separate from the permanent Vault.
+- **Boundary:** extract durable concepts into `type: permanent` notes, preserving the project as conceptual origin when useful. Do not move task status, deadlines, assignments, or other operational noise into the Vault.
+- **Lifecycle:** completed or abandoned projects are archived, not deleted, unless the user explicitly requests deletion.
 
 ## Atomicity — the criteria
 
@@ -73,7 +83,7 @@ One note = one idea = one claim that could be true or false.
 2. **Every link states its reason** — one line, written at link time. A link without a reason is invisible to your future self.
 3. **Link to the most specific relevant note**, not to the nearest topic hub. Hubs are for browsing; specific links are for thinking.
 4. **Mind both directions.** When linking A → B, check whether B should mention A. In tools with backlinks this happens automatically; in tools without, add the return link when it adds meaning.
-5. **No orphans.** A permanent note with no links is either a seed for a new cluster (fine, temporarily — mark it) or a note that shouldn't be permanent (archive it). When adding a note you cannot link to anything, ask: is this the first note of a new territory, or a fact that belongs as detail inside an existing note?
+5. **No artificial links.** A permanent note with no links may be the legitimate first note in a new territory. Record the exception as a status such as `draft` or `review`, and revisit it later. If the note is neither atomic nor useful on its own, keep it fleeting or archive it instead.
 
 ## Statement titles
 
@@ -85,7 +95,7 @@ One note = one idea = one claim that could be true or false.
 ## Tags
 
 - **Few** (a dozen or fewer across the whole system), **stable**, **cross-cutting**.
-- **Good uses:** status markers (`#seedling`, `#evergreen`), broad life/work domains (`#work`, `#personal`), note-type markers in flat layouts.
+- **Good uses:** status markers (`#draft`, `#review`, `#obsolete`), broad life/work domains (`#work`, `#personal`), note-type markers in flat layouts.
 - **Bad uses:** topic tags duplicating what links already express. A `#productivity` tag on every productivity note adds nothing the structure note doesn't already do better.
 - **The distinction:** tags answer "show me notes of this *kind*"; links answer "what *relates* to this note." The second question does the heavy lifting in Zettelkasten.
 
@@ -106,7 +116,7 @@ One note = one idea = one claim that could be true or false.
 
 ```
 fleeting note
-   → (idea from a source? → literature note)
+   → (idea from a source? → bib note)
    → permanent note(s), atomic, statement-titled
    → linked into the network
    → indexed in a structure note (when the cluster forms)

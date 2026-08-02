@@ -13,19 +13,19 @@ Someone heard about Luhmann's slip-box, read Sönke Ahrens' *How to Take Smart N
 | Folder | Contents | What it demonstrates |
 |---|---|---|
 | `0 Inbox/` | 1 fleeting note | Raw capture, not yet processed — no polish, no links |
-| `1 Literature/` | 1 literature note | One source, ideas paraphrased in the reader's own words, full reference |
+| `1 Literature/` | 1 bib note | One source, ideas paraphrased in the reader's own words, full reference |
 | `2 Permanent/` | 3 permanent notes | Atomic notes: statement titles, full sentences, links with stated reasons |
 | `3 Structure/` | 1 MOC + root index | Annotated maps into the cluster; the single entry point to the system |
 | `4 Archive/` | 1 archived fleeting note | Nothing is deleted — processed notes rest here, marked with where they went |
 
 ## The network
 
-Every permanent note links to at least one other note, and **every link carries a one-line reason** — that reason is what turns a pile of markdown files into a thinking tool.
+Every permanent note searches for related notes before saving, and **every genuine link carries a one-line reason**. A first note in a new territory may remain temporarily unlinked rather than inventing a connection.
 
 - `202607281709` **Writing externalizes thought** → links to the other two permanent notes + the source
 - `202607281815` **Emergent structure beats imposed taxonomy** → links to `202607281709` + the source
 - `202607281902` **Notes are conversations with a future self** → links to `202607281709` + the source
-- The literature note points to all three permanent notes it was distilled into
+- The bib note points to all three permanent notes it was distilled into
 - The MOC and the root index tie the cluster together
 
 ## Conventions shown

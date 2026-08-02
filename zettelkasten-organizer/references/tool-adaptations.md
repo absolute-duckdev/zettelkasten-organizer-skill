@@ -16,7 +16,7 @@ How to express the four Zettelkasten primitives — containers, links, IDs, tags
 
 ## Obsidian
 
-- **Containers:** folders work (`0 Inbox/`, `1 Literature/`, …), but Obsidian culture leans flat: one folder, note type as a frontmatter `type:` property or `#type/permanent` tag, organization via links and MOCs. Offer both layouts (SKILL.md, Mode 1).
+- **Containers:** folders work (`0 Inbox/`, `1 Bib/`, …), but Obsidian culture leans flat: one folder, note type as a frontmatter `type:` property or `#type/permanent` tag, organization via links and MOCs. Offer both layouts (SKILL.md, Mode 1).
 - **Links:** `[[Note title]]` — Obsidian resolves by name, so links survive without IDs. Backlinks panel shows inbound connections automatically; still write the "why" line next to each link in the body.
 - **IDs:** optional here. If wanted, use filename prefix `202607281709 Title.md` or `uid: 202607281709` in frontmatter. Do not insist — Obsidian's name-based linking makes IDs redundant for many users.
 - **Tags:** native `#tag`; keep to the few stable ones.
@@ -32,7 +32,7 @@ How to express the four Zettelkasten primitives — containers, links, IDs, tags
 
 ## Notion
 
-- **Containers:** one database (e.g., "Zettelkasten") with a `Type` select property (Fleeting / Literature / Permanent / Structure / Archive). Filtered views play the role of folders: an "Inbox" view (Type = Fleeting), a "Permanent" view, etc.
+- **Containers:** one database (e.g., "Zettelkasten") with a `Type` select property (Fleeting / Bib / Permanent / Structure / Project). Filtered views play the role of folders: an "Inbox" view (Type = Fleeting), a "Permanent" view, etc. Archive is a lifecycle view or location, not a note type.
 - **Links:** a `Related notes` relation property on the database (self-referential), plus inline `[[mentions]]` in page bodies. Backlinks appear automatically on each page. The "why" line goes in the body next to the mention, or as a relation description.
 - **IDs:** an `ID` property (text or created-time). Title prefix also works but clutters Notion's relation pickers — prefer the property.
 - **Tags:** a multi-select property; keep the options list short and governed.
@@ -40,7 +40,7 @@ How to express the four Zettelkasten primitives — containers, links, IDs, tags
 
 ## Craft
 
-- **Containers:** folders (Inbox, Literature, Permanent, Structure, Archive) inside a space — Craft's document-per-note model fits permanent notes well.
+- **Containers:** folders (Inbox, Bib, Permanent, Structure, Projects, Archive) inside a space — Craft's document-per-note model fits permanent notes well.
 - **Links:** native document links (`@` mention / slash command) with a backlinks section on every document. Write the "why" line in the body next to each link.
 - **IDs:** title prefix (`202607281709 Writing externalizes thought`) — Craft has no custom properties, so the title carries the ID.
 - **Tags:** Craft's tag feature; keep few and stable.

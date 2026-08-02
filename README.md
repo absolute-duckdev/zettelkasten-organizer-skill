@@ -1,6 +1,6 @@
 # Zettelkasten Organizer
 
-An [Agent Skills](https://agentskills.io) skill that turns an AI agent into a Zettelkasten assistant: it sets up, organizes, and maintains a slip-box note system in **any** note-taking tool — Obsidian, Logseq, Notion, Craft, or plain markdown files.
+A portable skill that turns an AI agent into a Zettelkasten assistant: it sets up, organizes, and maintains a slip-box note system in **any** note-taking tool — Obsidian, Logseq, Notion, Craft, or plain markdown files.
 
 The method is the one developed by sociologist **Niklas Luhmann** (roughly 90,000 cards, 70+ books) and popularized by **Sönke Ahrens** in *How to Take Smart Notes*. Its core insight: the value of a note system is not in collecting notes but in the network of connections between them. **Folders organize; links think.**
 
@@ -10,8 +10,8 @@ Four modes of use:
 
 | Mode | What it does |
 |---|---|
-| **Initial setup** | Builds the structure (Inbox → Literature → Permanent → Structure → Archive), adapted to your tool's syntax |
-| **Process the inbox** | Triages fleeting notes: archive, file as literature, or distill into atomic permanent notes |
+| **Initial setup** | Builds the structure (Inbox → Bib → Permanent → Structure → Projects → Archive), adapted to your tool's syntax |
+| **Process the inbox** | Triages fleeting notes: archive, file as bib, or distill into atomic permanent notes |
 | **New permanent note** | Drafts one atomic note with you: statement title, your own words, links with stated reasons |
 | **Audit & maintenance** | Finds orphaned notes, dense clusters needing a MOC, atomicity violations, inbox debt, bare links |
 
@@ -20,13 +20,14 @@ Safety is built in: the skill **never creates, moves, splits, or deletes a real 
 ## The method in 30 seconds
 
 - **Fleeting notes** — quick captures of ideas. Raw material, processed within days.
-- **Literature notes** — what a source says, paraphrased in your own words, with the full reference.
+- **Bib notes** — what a source says, paraphrased in your own words, with the full reference. They are also called literature notes.
 - **Permanent notes** — the heart of the system. One idea per note (atomic), titled with a **statement** ("Writing externalizes thought", not "Writing"), and densely **linked** — every link carrying a line that explains *why* the notes connect.
 - **Structure notes** — maps of content (MOCs): annotated indexes that emerge when a cluster of notes grows enough to need a map.
+- **Project notes** — drafts, tasks, and working material for a specific deliverable, kept outside the permanent Vault.
 
 ## Installation
 
-The skill follows the open [Agent Skills specification](https://agentskills.io/specification), so it works with any compatible agent. The folder `zettelkasten-organizer/` is self-contained — no dependencies, no build step.
+The folder `zettelkasten-organizer/` is self-contained — no dependencies, no build step.
 
 **Claude Code** — copy the skill folder into your skills directory:
 
@@ -37,7 +38,7 @@ cp -r zettelkasten-organizer-skill/zettelkasten-organizer ~/.claude/skills/
 
 **Craft Agents** — copy `zettelkasten-organizer/` into your workspace's `skills/` folder.
 
-**Any Agent Skills-compatible client** — place the `zettelkasten-organizer/` folder wherever your client loads skills from.
+**Other compatible agents** — place the `zettelkasten-organizer/` folder wherever your agent loads skills from.
 
 ## Usage
 
@@ -71,15 +72,7 @@ zettelkasten-organizer-skill/
 
 ## The mini example
 
-[`examples/mini-zettelkasten/`](examples/mini-zettelkasten/) is a complete, tiny Zettelkasten — 8 notes showing the full pipeline: one unprocessed fleeting note in the inbox, one literature note, three atomic permanent notes linked to each other, a map of content, the root index, and one archived fleeting note. Open the folder in Obsidian (or any markdown reader) to follow the links.
-
-## Validating
-
-The skill is designed to conform to the [Agent Skills specification](https://agentskills.io/specification). You can verify it with the reference validator:
-
-```bash
-skills-ref validate zettelkasten-organizer/
-```
+[`examples/mini-zettelkasten/`](examples/mini-zettelkasten/) is a complete, tiny Zettelkasten — 8 notes showing the full pipeline: one unprocessed fleeting note in the inbox, one bib note, three atomic permanent notes linked to each other, a map of content, the root index, and one archived fleeting note. Open the folder in Obsidian (or any markdown reader) to follow the links.
 
 ## License
 

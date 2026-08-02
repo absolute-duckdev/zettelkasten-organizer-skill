@@ -4,7 +4,7 @@ description: "Implement and maintain a Zettelkasten (slip-box) note-taking syste
 license: MIT
 metadata:
   author: absolute-duckdev
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Zettelkasten Organizer
@@ -29,14 +29,15 @@ Before classifying, splitting, or restructuring any notes, read `references/zett
 
 ## Quick orientation
 
-Zettelkasten uses four note types:
+Zettelkasten uses five note types. `Archive` is a storage destination, not a note type, and `status` describes a note's lifecycle without changing its type:
 
 - **Fleeting notes** — quick captures of ideas, reminders, quotes. Raw material. They live in the inbox and are processed or discarded within days.
-- **Literature notes** — brief, paraphrased records of ideas from external sources (books, articles, talks), with a full reference to the source.
+- **Bib notes** — brief, paraphrased records of ideas from external sources (books, articles, talks), with a full reference to the source. They are also called literature notes.
 - **Permanent notes** — the heart of the system. **Atomic** (one idea each), written in full sentences in the user's own words, titled with a **statement** (the idea itself, not a topic), and densely **linked** to related notes. These live in the slip-box forever.
-- **Structure notes** — maps of content (MOCs): index notes that give entry points into clusters of permanent notes on a topic.
+- **Structure notes** — maps of content (MOCs), registers, and argument structures that give entry points into clusters of permanent notes or arrange them for a specific output.
+- **Project notes** — drafts, tasks, decisions, and working material tied to a deliverable. Durable ideas are distilled into permanent notes; project operations stay outside the Vault.
 
-The workflow: capture fleeting → distill into literature notes (when the idea comes from a source) → write permanent notes → link them into the network → index them in structure notes as clusters emerge.
+The workflow: capture fleeting → distill source material into bib notes → write permanent notes → link them into the network → index clusters in structure notes as they emerge. Project notes support output without entering the permanent knowledge base.
 
 ## The four universal primitives
 
@@ -76,10 +77,11 @@ Build the structure from scratch (or rebuild). Present these two layout options 
 
 ```
 0 Inbox/        fleeting notes, quick capture
-1 Literature/   reading notes, one per source
+1 Bib/         bibliographic notes, one per source
 2 Permanent/    atomic permanent notes — the heart
 3 Structure/    structure notes / MOCs
-4 Archive/      processed or discarded notes (nothing is deleted)
+4 Projects/    project notes, drafts, and deliverables
+5 Archive/     processed or discarded notes (nothing is deleted)
 ```
 
 **Option B — Flat layout** — all notes in one container; note type marked by a tag or property; organization emerges purely from links and structure notes. Many users of link-native tools prefer this: it forces the network to do the work. Inbox and Archive still get their own containers — capture and disposal need boundaries.
@@ -93,12 +95,12 @@ Then follow the phased workflow below.
 The core habit of the method. For each fleeting note in the inbox, triage:
 
 1. **Discard/archive** — a momentary reminder with no lasting value? Archive it (never delete).
-2. **Reference** — source material worth keeping but not an idea to develop? File it as a literature note (paraphrased, with the full source reference).
+2. **Reference** — source material worth keeping but not an idea to develop? File it as a bib note (paraphrased, with the full source reference).
 3. **Develop** — an idea worth keeping? Write one or more **permanent notes** from it:
    - One idea per note (split if needed)
    - Title = a full statement of the idea
    - Written in the user's own words, full sentences
-   - Search the existing permanent notes and **link to at least one related note** (or justify why none exists)
+   - Search the existing permanent notes and link to related notes when a genuine relationship exists. If this is the first note in a new territory, record the justified exception rather than inventing a link.
    - Each link gets a sentence explaining *why* the notes connect
    - Archive the fleeting note once processed
 
@@ -109,7 +111,7 @@ For batches of more than ~5 notes, use the phased workflow (plan first). For a h
 When the user brings a single idea:
 
 1. Ask what the idea is and where it came from (their own thinking? a source?)
-2. **Search the existing notes for related ideas.** This is not optional — the link is the point.
+2. **Search the existing notes for related ideas.** This is not optional. Create genuine contextual links when they exist; a first note in a new territory may remain temporarily unlinked.
 3. Draft the note following `references/note-templates.md`:
    - Unique ID (tool-appropriate)
    - Statement title
@@ -123,7 +125,7 @@ When the user brings a single idea:
 
 Scan the system and report on its health. Read-only findings first, then propose fixes as a plan:
 
-- **Orphaned notes** — permanent notes with no links in or out. For each, suggest specific existing notes to connect (with the "why"), or recommend archiving.
+- **Orphaned notes** — permanent notes with no links in or out. For each, suggest specific existing notes to connect (with the "why"), or mark it as a legitimate first note in a new territory. Never create an artificial link.
 - **Dense clusters** — topics with many mutually linked permanent notes but no structure note. Propose a structure note / MOC listing the key notes with one-line descriptions.
 - **Atomicity violations** — notes covering 2+ distinct ideas. Propose a split: the new notes, their statement titles, and how links redistribute.
 - **Context-free notes** — permanent notes missing their source or the "why this matters" context.
@@ -183,11 +185,11 @@ Close with: "Everything that was already here is safe in Archive if you need it 
 
 ### Phase 4: Output
 
-Create the **root structure note** (the index of the system) from `references/note-templates.md`, saved in the structure container (or the top level in flat layouts). It lists: entry points by topic, the most connected notes, and how the pipeline works (Inbox → Literature → Permanent → Structure).
+Create the **root structure note** (the index of the system) from `references/note-templates.md`, saved in the structure container (or the top level in flat layouts). It lists: entry points by topic, the most connected notes, and how the pipeline works (Inbox → Bib → Permanent → Structure; Projects support deliverables).
 
 Then share closing habits, briefly:
 
-- **Process the inbox weekly** — an inbox older than a week is a graveyard
+- **Process the inbox regularly** — aim for 24–48 hours, but adapt the cadence to the user's habits and volume
 - **Write permanent notes for your future self** — full sentences, own words, no context assumed
 - **Add links, not folders** — when a note doesn't fit, the answer is a connection, not a new category
 - **Let structure notes emerge** — create one when a topic has enough notes to need a map, not before
@@ -196,12 +198,12 @@ Then share closing habits, briefly:
 ## Core rules (enforce all of these)
 
 1. **Atomicity.** One idea per permanent note. If a note covers 2+ distinct ideas, propose a split. Test: could this note be linked into two different conversations without dragging in irrelevant content?
-2. **Links over hierarchy.** The network is the value. Every new permanent note links to at least one existing note — or explicitly justifies why none fits (rare; usually means the search was too shallow).
+2. **Links over hierarchy.** The network is the value. Search before writing every new permanent note and add only genuine, contextual links. A first note in a new territory may be temporarily unlinked, with the exception recorded for later review.
 3. **Links carry context.** Every link includes a phrase or sentence explaining *why* the notes connect. Bare link lists are not Zettelkasten — they're a table of contents.
 4. **Statement titles.** Permanent note titles are the idea itself, as a full claim: "Writing externalizes thought" — never a bare topic like "Writing." Topics are for structure notes.
 5. **Own words, always.** Literature and permanent notes are paraphrased. Copy-paste from sources is capture, not thinking. Quotes are allowed only as clearly marked quotes with the source.
 6. **Tags are secondary.** Few, stable, cross-cutting (status, broad domain). Tags help filter; they never replace links. Never propose a tag taxonomy as the organization system.
-7. **Nothing is deleted.** Processed fleeting notes, discarded material, superseded versions — all go to Archive. The archive is what makes people brave enough to process aggressively.
+7. **Nothing is deleted.** Processed fleeting notes, discarded material, superseded versions, and completed projects go to Archive. The archive is what makes people brave enough to process aggressively.
 8. **No empty containers.** Create a container only when there is content for it. Note planned-but-empty containers in the plan as "create when needed."
 9. **IDs are boring.** Use timestamp IDs (`YYYYMMDDHHMM` or shorter) unless the user's tool has a native ID convention. Never spend the user's time designing clever ID schemes.
 10. **When in doubt, ask.** Better to surface one question than to silently misfile a thought.

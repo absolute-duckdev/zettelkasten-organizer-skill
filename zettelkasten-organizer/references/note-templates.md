@@ -13,6 +13,7 @@ IDs below use the `YYYYMMDDHHMM` timestamp convention. Replace with the tool-app
 id: 202607281709
 type: permanent
 created: 2026-07-28
+status: active
 tags: []
 source: "[[202607281200 - Source title, if any]]"
 ---
@@ -47,12 +48,12 @@ change, enable, or contradict?]
 
 ---
 
-## Literature note
+## Bib note (literature note)
 
 ```markdown
 ---
 id: 202607281200
-type: literature
+type: bib
 created: 2026-07-28
 tags: []
 source: "Ahrens, S. (2017). How to Take Smart Notes. CreateSpace."
@@ -96,6 +97,36 @@ collection-vs-network distinction when processing.
 ```
 
 No ceremony. Fleeting notes are raw capture — no links, no polish required. They are processed within days and then archived.
+
+---
+
+## Project note
+
+```markdown
+---
+id: 202607281745
+type: project
+created: 2026-07-28
+status: active
+project: "Project name"
+---
+
+# Project name
+
+## Outcome
+
+[What this project must deliver.]
+
+## Working notes
+
+- [Drafts, decisions, questions, and task-specific material belong here.]
+
+## Permanent knowledge extracted
+
+- [[202607281709 - Statement title]] — durable concept extracted from this project.
+```
+
+Project notes may contain operational material. Only durable, atomic concepts move into permanent notes; preserve this project link as `origin` when it adds useful provenance.
 
 ---
 
@@ -153,9 +184,9 @@ created: 2026-07-28
 
 ## How this system works
 
-Capture in **Inbox** → distill sources into **Literature** notes → write
+Capture in **Inbox** → distill sources into **Bib** notes → write
 **Permanent** notes (atomic, statement-titled, linked) → map clusters in
-**Structure** notes → processed material rests in **Archive**.
+**Structure** notes. **Project** notes support deliverables; processed material rests in **Archive**.
 
 ## Entry points
 
@@ -171,7 +202,7 @@ Capture in **Inbox** → distill sources into **Literature** notes → write
 ## Habits
 
 - Process the inbox weekly
-- Every permanent note links to at least one other
+- Search for links before saving every permanent note; do not create artificial links for a first note in a new territory
 - Create structure notes only when a cluster needs a map
 ```
 

@@ -1,6 +1,6 @@
 ---
 id: 202607281200
-type: literature
+type: bib
 created: 2026-07-28
 tags: []
 source: "Ahrens, S. (2017). How to Take Smart Notes. CreateSpace."

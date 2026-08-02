@@ -8,7 +8,7 @@ created: 2026-07-28
 
 ## How this system works
 
-Capture in **Inbox** → distill sources into **Literature** notes → write
+Capture in **Inbox** → distill sources into **Bib** notes → write
 **Permanent** notes (atomic, statement-titled, linked) → map clusters in
 **Structure** notes → processed material rests in **Archive**.
 
@@ -24,5 +24,5 @@ Capture in **Inbox** → distill sources into **Literature** notes → write
 ## Habits
 
 - Process the inbox weekly
-- Every permanent note links to at least one other
+- Search for links before saving every permanent note; do not create artificial links for a first note in a new territory
 - Create structure notes only when a cluster needs a map
